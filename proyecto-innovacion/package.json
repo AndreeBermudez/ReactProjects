@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-innovacion",
+  "version": "1.0.0",
+  "description": "Oculink Frontend y Backend",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd oculink-backend && npm run dev",
+    "dev:frontend": "cd oculink-fronted && npm run dev",
+    "install:all": "npm install && cd oculink-backend && npm install && cd ../oculink-fronted && npm install",
+    "build": "cd oculink-fronted && npm run build",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd oculink-backend && npm start",
+    "start:frontend": "cd oculink-fronted && npm run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
